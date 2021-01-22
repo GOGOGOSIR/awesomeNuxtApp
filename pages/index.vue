@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <div>
+      <Test />
       <Logo />
       <h1 class="title">awesomeNuxtApp</h1>
       <div class="links">
@@ -26,7 +27,9 @@
 </template>
 
 <script>
-export default {}
+export default {
+  layout: '404',
+}
 </script>
 
 <style>
