@@ -12,8 +12,36 @@
         </div>
         <h2>动态路由</h2>
         <div class="linkWrapper">
-          <NuxtLink class="nuxt-link-btn" to="/user">user index</NuxtLink>
-          <NuxtLink class="nuxt-link-btn" to="/user/one">user one</NuxtLink>
+          <NuxtLink class="nuxt-link-btn" to="/dynamicRoute/1">
+            dynamicRoute/_slug/index
+          </NuxtLink>
+          <NuxtLink class="nuxt-link-btn" to="/dynamicRoute/2/comments">
+            dynamicRoute/_slug/comments
+          </NuxtLink>
+          <NuxtLink class="nuxt-link-btn" to="/dynamicRoute/2/999">
+            dynamicRoute/_slug/_list
+          </NuxtLink>
+        </div>
+        <h2>嵌套路由</h2>
+        <div class="linkWrapper">
+          <NuxtLink class="nuxt-link-btn" to="/nested/normal">
+            nested normal index
+          </NuxtLink>
+          <NuxtLink class="nuxt-link-btn" to="/nested/normal/1">
+            nested normal _id
+          </NuxtLink>
+        </div>
+        <h2>嵌套动态路由</h2>
+        <div class="linkWrapper">
+          <NuxtLink class="nuxt-link-btn" to="/nested/1">
+            nested _dynamicNested index
+          </NuxtLink>
+          <NuxtLink class="nuxt-link-btn" to="/nested/1/2">
+            nested _dynamicNested _sub
+          </NuxtLink>
+          <NuxtLink class="nuxt-link-btn" to="/nested/1/2/3">
+            nested _dynamicNested _sub _id
+          </NuxtLink>
         </div>
       </div>
     </div>
@@ -33,6 +61,16 @@ export default {
 }
 .nuxt-link-btn {
   margin-right: 5px;
+  padding: 5px 15px;
+  border: 1px solid #999;
+  text-decoration: none;
+  color: #333;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+.nuxt-link-btn:hover {
+  color: #00c58e;
+  border-color: #00c58e;
 }
 .container {
   margin: 0 auto;

@@ -37,4 +37,9 @@ export default {
   build: {
     transpile: [/^element-ui/],
   },
+
+  // 定义route的一些配置项
+  router: {
+    base: '/app/'
+  }
 }
