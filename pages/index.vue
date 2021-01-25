@@ -5,22 +5,16 @@
       <Logo />
       <h1 class="title">awesomeNuxtApp</h1>
       <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+        <h2>静态路由</h2>
+        <div class="linkWrapper">
+          <NuxtLink class="nuxt-link-btn" to="/user">user index</NuxtLink>
+          <NuxtLink class="nuxt-link-btn" to="/user/one">user one</NuxtLink>
+        </div>
+        <h2>动态路由</h2>
+        <div class="linkWrapper">
+          <NuxtLink class="nuxt-link-btn" to="/user">user index</NuxtLink>
+          <NuxtLink class="nuxt-link-btn" to="/user/one">user one</NuxtLink>
+        </div>
       </div>
     </div>
   </div>
@@ -28,11 +22,18 @@
 
 <script>
 export default {
-  layout: '404',
+  // layout: '404',
 }
 </script>
 
 <style>
+.linkWrapper {
+  display: flex;
+  justify-content: center;
+}
+.nuxt-link-btn {
+  margin-right: 5px;
+}
 .container {
   margin: 0 auto;
   min-height: 100vh;
